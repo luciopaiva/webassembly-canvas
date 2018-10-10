@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>WebAssembly experiment</title>
+
+    <style>
+        #canvas {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
 </head>
 <body>
 
+<canvas id="canvas"></canvas>
+
 <script>
+    const canvas = document.getElementById("canvas");
+    const context = canvas.getContext("2d");
+    context.fillStyle = "black";
+    context.fillRect(0, 0, 500, 500);
+
+    // https://stackoverflow.com/a/45449183/778272
+    // imageData = new ImageData(new Uint8ClampedArray(waInstance.export.memory.buffer, byteOffset, width*height*4), width, height)
+
+    // https://www.hellorust.com/demos/canvas/index.html
+
     async function run() {
         const response = await fetch("main.wasm");
         const buffer = await response.arrayBuffer();
