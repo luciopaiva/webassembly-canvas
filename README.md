@@ -7,11 +7,9 @@ This first approach defines a function that just returns a constant value.
 
 To build it:
 
-    node compile
+    node compile-save-and-run
 
-To run:
-
-    node run
+It will automatically run the compiled code, asserting that it worked.
 
 ---
 
