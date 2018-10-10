@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebAssembly experiment</title>
+</head>
+<body>
+
+<script>
+    async function run() {
+        const response = await fetch("main.wasm");
+        const buffer = await response.arrayBuffer();
+        const wasm = await WebAssembly.instantiate(buffer);  // see https://stackoverflow.com/a/52732080/778272
+
+        console.info(wasm.instance.exports.helloWorld());
+    }
+    run();
+</script>
+
+</body>
+</html>
