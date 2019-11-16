@@ -1,15 +1,21 @@
 
-# WebAssembly canvas experiment
+# WebAssembly experiment
 
 Simple WebAssembly experiment based on [this good tutorial](https://blog.scottlogic.com/2018/04/26/webassembly-by-hand.html).
 
-This first approach defines a function that just returns a constant value.
+The current version defines a function that just returns a constant value.
 
-To build it:
+To build it, make sure you have nvm installed and run:
 
+    nvm install
+    npm install
     node compile-save-and-run
 
 It will automatically run the compiled code, asserting that it worked.
+
+## To do
+
+My main goal here is to get to the point of being able to drawing in an HTML5 canvas using WebAssembly to see how fast it gets in comparison with plain Javascript.
 
 ---
 
